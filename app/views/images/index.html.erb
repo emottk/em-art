@@ -8,7 +8,10 @@
 
 <% @images.each do |i| %>
   <%= i.title %> <br>
-  <%= image_tag(i.url) %> <br>
+  <% if i.picture_url != nil %>
+  <%= image_tag(i.picture_url) %>
+  <%end%>
+  <br>
   <%= i.description %><br>
   <%= link_to 'Show', image_path(i) %>
   <%= link_to 'Edit', edit_image_path(i) %>

@@ -19,7 +19,12 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+  </p>
+
+  <p>
+    <%= f.submit 'Save'%>
   </p>
 <% end %>
 <br>

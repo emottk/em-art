@@ -18,7 +18,7 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @image = Image.new(article_params)
+    @image = Image.new(image_params)
 
     if @image.save
       redirect_to @image
@@ -46,7 +46,7 @@ class ImagesController < ApplicationController
 
 private
   def image_params
-    params.require(:image).permit(:title, :url, :description)
+    params.require(:image).permit(:title, :url, :description, :picture)
   end
 
 end
