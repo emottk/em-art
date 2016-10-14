@@ -1,20 +1,18 @@
 
 <p>
-  <strong>Title:</strong>
-  <%= @image.title %>
+  <h1><strong><%= @image.title %></strong></h1>
+
 </p>
 
 
 <p>
-  <strong>Image</strong>
   <%= image_tag(@image.url) %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+
   <%= @image.description %>
 </p>
 
 
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+<%= link_to 'Back', :root %>

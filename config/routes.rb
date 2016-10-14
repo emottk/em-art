@@ -4,10 +4,12 @@ Rails.application.routes.draw do
     sessions: 'admins/sessions'
   }
   resources :images
+  resources :gallery
 
   get 'contact/index'
 
   get 'home/index'
+
 
   root to: 'gallery#index'
   # The priority is based upon order of creation: first created -> highest priority.

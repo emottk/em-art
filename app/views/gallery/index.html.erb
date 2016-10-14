@@ -1,13 +1,13 @@
 
 
-<h1>Listing Images</h1>
+<h1>Gallery</h1>
 <br>
 
 
 <% @images.each do |i| %>
   <%= i.title %> <br>
    <br>
-  <a href = "/images/<%= i.id %>">
+  <a href = "/gallery/<%= i.id %>">
     <%= image_tag(i.url) %>
   </a>
   <br><br>
