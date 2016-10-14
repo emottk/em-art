@@ -1,5 +1,17 @@
+
+
+<h1>Listing Images</h1>
+<%= link_to 'New image', new_image_path %>
+<br>
+
+
 <% @images.each do |i| %>
   <%= i.title %> <br>
   <%= image_tag(i.url) %> <br>
-  <%= i.description %>
+  <%= i.description %><br>
+  <%= link_to 'Show', image_path(i) %>
+  <%= link_to 'Edit', edit_image_path(i) %>
+  <%= link_to 'Destroy', image_path(i),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %><br><br>
 <% end %>
