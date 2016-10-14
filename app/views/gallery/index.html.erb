@@ -7,8 +7,9 @@
 <% @images.each do |i| %>
   <%= i.title %> <br>
    <br>
-  <%= link_to(@image) do %>
-    <%= image_tag(i.url) %><br><br>
-    <% end %>
+  <a href = "/images/<%= i.id %>">
+    <%= image_tag(i.url) %>
+  </a>
+  <br><br>
 
 <% end %>

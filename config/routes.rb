@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+  devise_for :admins, controllers: {
+    sessions: 'admins/sessions'
+  }
   resources :images
 
   get 'contact/index'
 
-  get 'gallery/index'
+  get 'home/index'
 
-  root 'home#index'
+  root to: 'gallery#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

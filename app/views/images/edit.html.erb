@@ -1,3 +1,4 @@
+<%= render "shared/admin_nav" %>
 <h1>Edit Your Image</h1>
 
 <%= form_for :image, url: image_path(@image), method: :patch do |f| %>
@@ -17,7 +18,7 @@
   <% end %>
 
   <%= image_tag(@image.url) %>
-  
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>

@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-
+  before_action :authenticate_admin!
 
   def index
     @images = Image.all
@@ -45,7 +45,7 @@ class ImagesController < ApplicationController
   end
 
 private
-  def article_params
+  def image_params
     params.require(:image).permit(:title, :url, :description)
   end
 
